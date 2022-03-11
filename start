@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+export PYTHON_BINARY=python
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+$PYTHON_BINARY bot.py
