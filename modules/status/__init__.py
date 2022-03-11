@@ -15,7 +15,7 @@ class Send:
 bot_id = 2314163511
 
 
-@on_schedule('bot_status', IntervalTrigger(minutes=10))
+@on_schedule('bot_status', IntervalTrigger(minutes=30))
 async def _(target: FetchTarget):
     command = '~echo ' + ''.join(random.sample(string.ascii_letters + string.digits, 8))
     send = await bot.send_private_msg(user_id=bot_id, message=command)
