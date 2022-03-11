@@ -12,7 +12,7 @@ bot_id = 2314163511
 send_ = False
 
 
-@on_schedule('bot_status', IntervalTrigger(minutes=5))
+@on_schedule('bot_status', IntervalTrigger(minutes=10))
 async def _(target: FetchTarget):
     nonlocal send_
     command = '~echo ' + ''.join(random.sample(string.ascii_letters + string.digits, 8))
